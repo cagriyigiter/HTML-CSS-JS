@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Çağrı Emre Yiğiter">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- LinkedIn Link : https://www.linkedin.com/in/%C3%A7a%C4%9Fr%C4%B1-emre-yi%C4%9Fiter-7295ab210/ -->
+</head>
+
+<body>
+    <div class="main">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="row mb-1">
+                    <hr>
+                    <h3 class="text-center text-danger">Grades</h3>
+                </div>
+                <div class="row mb-1">
+                    <div class="col-12 col-sm-12 col-xl-6">
+                        <label for="midtermSelector" class="form-label">Select Midterms</label>
+                        <button type="button" id="midtermSelector" class="form-control btn btn-primary">2 Midterm</button>
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <div class="col-sm-12 col-md-6 ">
+                        <label for="mid1" class="form-label">1st Midterm Grade</label>
+                        <input id="mid1" class="form-control" type="number" max="100" min="0" autofocus>
+                    </div>
+                    <div class="col-sm-12 col-md-6 ">
+                        <label for="mid1_w" class="form-label">1st Midterm Weight(%)</label>
+                        <input id="mid1_w" class="form-control" type="number" max="100" min="0">
+                    </div>
+                </div>
+                <div class="row mb-1" style="visibility: hidden; position:fixed;">
+                    <div class="col-sm-12 col-md-6">
+                        <label for="mid2" class="form-label">2nd Midterm Grade</label>
+                        <input class="form-control" id="mid2" type="number" max="100" min="0">
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <label for="mid2_w" class="form-label">2nd Midterm Weight(%)</label>
+                        <input class="form-control" id="mid2_w" type="number" max="100" min="0">
+                    </div>
+                </div>
+                <div class="row mb-1 ">
+                    <div class="col-sm-12 col-md-6">
+                        <label class="form-label" for="fin">Final Grade</label>
+                        <input class="form-control" id="fin" type="number" max="100" min="0">
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <label class="form-label" for="fin_w">Final Grade Weight(%)</label>
+                        <input class="form-control" id="fin_w" type="number" max="100" min="0">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12 col-sm-12 col-xl-6">
+                        <label for="calculate" class="form-label">Calculate</label>
+                        <button type="button" id="calculator" class="form-control btn btn-success">Calculate</button>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <hr>
+                    <h3 class="text-center text-danger">Result</h3> 
+                    <table class="table table-light table-bordered table-fixed table-responsive">
+                        <thead class="text-center">
+                            <tr>
+                                <th class="w-50">Average Grade : </th>
+                                <th id="grade">-</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
